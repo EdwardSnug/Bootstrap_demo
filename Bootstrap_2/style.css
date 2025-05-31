@@ -1,8 +1,28 @@
-* {
+/* {
   box-sizing: border-box;
-}
+}**/
 body {
   background-color: black;
+  
+}
+.container-fluid{
+    background-color:rgba(0, 0, 0, 1);
+}
+/* For the first navbar in the row with id 'mynavbar' */
+#mynavbar .navbar {
+  /* Remove any spacing around */
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* For the second navbar in the second row */
+.container-fluid > .row:nth-child(2) .navbar {
+  /* Remove top margin */
+    margin-top: 0; 
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 #myprogress {
   height: 48vh;
@@ -29,12 +49,10 @@ body {
 }
 .row .col-3 .card {
   width: 100% !important;
+
 }
 .table-dark {
   width: 100%;
-}
-#mynavbar{
-    background-color: black;
 }
 /* Targeting specific images used as logos */
 #shrink-logo {
@@ -52,21 +70,25 @@ body {
     opacity: 0.4;
 }
 .card{
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
+    border: 4px solid #e0e0e0;
+    border-radius: 8px;
     transition: transform 0.3s ease;
     cursor: pointer;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
 }
 .card:hover{
     transform: translateY(-5px);
+    background-color: white;
+    /**background: linear-gradient(#9d63ed #37313a);*/
+    color: black;
 }
 /* Media queries for different screen sizes */
 @media (min-width: 576px) {
   .row > .col-3 {
-    flex: 0 0 100%; /* Each card takes full width */
+    /**Each card takes full width*/ 
+    flex: 0 0 100%;
+    flex-wrap: wrap;
     max-width: 100%;
     margin-bottom: 0.4rem;
   }
@@ -130,3 +152,4 @@ body {
     margin-top: 0;
   }
 }
+
