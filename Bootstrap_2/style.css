@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+#myprogress {
+  height: 48vh;
+  /**border: solid 2px red;**/
+}
+#myprogress .label1 {
+  margin-bottom: 0.6rem;
+}
+.label1 {
+  height: 12vh;
+  padding: 20px;
+}
+#section3 {
+  display: flex;
+  flex-direction: row;
+}
+#graph {
+  object-fit: fill;
+  overflow: hidden;
+}
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+}
+.row .col-3 .card {
+  width: 100% !important;
+}
+.table-dark {
+  width: 100%;
+}
+#mynavbar{
+    background-color: black;
+}
+/* Targeting specific images used as logos */
+#shrink-logo {
+    width: 50px;   
+    height: auto;  
+    padding: 10px; 
+}
+
+#shrink-logo h5 {
+    margin-top: 10px;
+}
+.myfooter{
+    text-align: center;
+    color: #fff;
+    opacity: 0.4;
+}
+.card{
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover{
+    transform: translateY(-5px);
+}
+/* Media queries for different screen sizes */
+@media (min-width: 576px) {
+  .row > .col-3 {
+    flex: 0 0 100%; /* Each card takes full width */
+    max-width: 100%;
+    margin-bottom: 0.4rem;
+  }
+}
+/* Adjust column widths for the graph and progress section */
+#section3 .col-8 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+#section3 .col-4 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+@media (min-width: 768px) {
+  /* For medium screens, arrange cards in two columns */
+  .row > .col-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/**
+    #section3 .col-8 {
+        flex: 0 0 66.666667%;  Bootstrap's col-8 equivalent 
+        max-width: 66.666667%;
+    }
+
+
+    #section3 .col-4 {
+        flex: 0 0 33.333333%; /* Bootstrap's col-4 equivalent 
+        max-width: 33.333333%;
+    }
+}*/
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* For large screens, arrange cards in three columns */
+  .row > .col-3 {
+    flex: 0 0 33.333333%; /* Each card takes a third of the width */
+    max-width: 33.333333%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .row > .col-3 {
+    flex: 0 0 25%; /* Each card takes a quarter of the width */
+    max-width: 25%;
+  }
+}
+
+.d-flex {
+  width: 100%; /* Search form takes full width on small screens */
+  margin-top: 0.5rem; /* Add some space above the search form */
+}
+
+@media (min-width: 576px) {
+  .d-flex {
+    width: auto; /* Revert to auto width on larger screens */
+    margin-top: 0;
+  }
+}

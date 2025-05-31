@@ -1,0 +1,106 @@
+/**
+/* General responsiveness for images and cards */
+.card-img-top {
+    max-width: 100%; /* Ensures images within cards scale down */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Make cards truly responsive */
+.row .col-3 .card {
+    width: 100% !important; /* Override inline style to make cards take full width of their column */
+}
+
+/* Media queries for different screen sizes */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    /* For smaller screens, stack the cards vertically */
+    .row > .col-3 {
+        flex: 0 0 100%; /* Each card takes full width */
+        max-width: 100%;
+        margin-bottom: 1rem; /* Add some space between stacked cards */
+    }
+
+    /* Adjust column widths for the graph and progress section */
+    #section3 .col-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    #section3 .col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* For medium screens, arrange cards in two columns */
+    .row > .col-3 {
+        flex: 0 0 50%; /* Each card takes half width, resulting in two cards per row */
+        max-width: 50%;
+    }
+
+    /* For the graph and progress, revert to their original proportions */
+    #section3 .col-8 {
+        flex: 0 0 66.666667%; /* Bootstrap's col-8 equivalent */
+        max-width: 66.666667%;
+    }
+
+    #section3 .col-4 {
+        flex: 0 0 33.333333%; /* Bootstrap's col-4 equivalent */
+        max-width: 33.333333%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* For large screens, arrange cards in three columns */
+    .row > .col-3 {
+        flex: 0 0 33.333333%; /* Each card takes a third of the width */
+        max-width: 33.333333%;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* For extra large screens, arrange cards in four columns */
+    .row > .col-3 {
+        flex: 0 0 25%; /* Each card takes a quarter of the width */
+        max-width: 25%;
+    }
+}
+
+/* Adjustments for the navbar to prevent overflow on very small screens */
+.navbar .container-fluid {
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+
+.navbar-brand, .navbar-nav {
+    flex-grow: 1; /* Allows these elements to grow and take available space */
+}
+
+.d-flex {
+    width: 100%; /* Search form takes full width on small screens */
+    margin-top: 0.5rem; /* Add some space above the search form */
+}
+
+@media (min-width: 576px) {
+    .d-flex {
+        width: auto; /* Revert to auto width on larger screens */
+        margin-top: 0;
+    }
+}
+
+/* Spacing for progress bars */
+#myprogress .label1 {
+    margin-bottom: 1rem; /* Add space between progress bars */
+}
+
+/* Table responsiveness */
+.table-dark {
+    width: 100%; /* Ensures table takes full width */
+    overflow-x: auto; /* Adds horizontal scroll on small screens if content overflows */
+    display: block; /* Required for overflow-x to work on tables */
+}
+*/
